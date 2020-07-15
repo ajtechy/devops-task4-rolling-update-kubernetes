@@ -1,0 +1,31 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+
+metadata:
+  name: web-data-pvc
+  labels:
+    env: produnction
+spec:
+  accessModes:
+   - ReadWriteMany
+  resources:  
+    requests:
+      storage: 2Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+
+metadata:
+  name: web-log-pvc
+  labels:
+    env: produnction
+spec:
+  accessModes:
+   - ReadWriteMany
+  resources:  
+    requests:
+      storage: 2Gi
+---
+
+    
